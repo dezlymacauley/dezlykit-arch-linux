@@ -28,6 +28,18 @@ npm install -g typescript
 # Language support for TypeScript
 npm install -g typescript-language-server
 
+# A collection of language servers extracted 
+# from the editor `Microsoft Visual Studio Code` aka VS Code
+# I use this to get language support for html, css, json
+npm install -g vscode-langservers-extracted
+
+# Language support for Svelte projects
+npm install -g svelte-language-server
+
+# Language support for Tailwind CSS. 
+# Note: the `@` symbol is part of the name
+npm install -g @tailwindcss/language-server
+
 echo
 echo "The following npm packages have been installed:"
 echo
