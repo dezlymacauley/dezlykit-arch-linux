@@ -22,7 +22,6 @@ vim.lsp.config(
     "bashls",
     {
         cmd = { "bash-language-server", "start" },
-        root_dir = vim.fs.root(0, { "package.json" }),
         filetypes = { "sh" },
     }
 )
@@ -107,6 +106,20 @@ vim.lsp.config(
     }
 )
 vim.lsp.enable("jsonls")
+
+-------------------------------------------------------------------------------
+
+-- SECTION: Python (.py)
+
+vim.lsp.config(
+    "ty",
+    {
+        cmd = { "ty", "server" },
+        filetypes = { "python" }
+    }
+)
+
+vim.lsp.enable("ty")
 
 -------------------------------------------------------------------------------
 
