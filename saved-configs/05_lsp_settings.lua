@@ -31,10 +31,50 @@ vim.lsp.enable("bashls")
 
 -------------------------------------------------------------------------------
 
+-- SECTION: CSS (.css)
+
+vim.lsp.config(
+    "cssls", 
+    {
+        cmd = { "vscode-css-language-server", "--stdio" },
+        filetypes = { "css" },
+        settings = {
+            css = {
+                lint = {
+                    -- This is to get rid of the unknown rule warning when there
+                    -- is a Tailwind CSS utility classes like `@theme` in a 
+                    -- CSS file
+                    unknownAtRules = "ignore"
+                }
+            }
+        }
+    }
+)
+
+vim.lsp.enable("cssls")
+
+-------------------------------------------------------------------------------
+
+-- SECTION: Dockerfile and Docker compose files
+
+vim.lsp.config(
+    "docker_language_server", 
+    {
+        cmd = { "docker-language-server", "start", "--stdio" },
+        filetypes = { "dockerfile" },
+    }
+
+)
+
+vim.lsp.enable("docker_language_server")
+
+-------------------------------------------------------------------------------
+
 -- SECTION: Go (.go)
 
 vim.lsp.config(
-    "gopls", {
+    "gopls", 
+    {
         cmd = { "gopls" },
         filetypes = { "go" },
     }
@@ -42,6 +82,31 @@ vim.lsp.config(
 )
 
 vim.lsp.enable("gopls")
+
+-------------------------------------------------------------------------------
+
+-- SECTION: HTML (.html)
+
+vim.lsp.config(
+    "html", 
+    {
+        cmd = { "vscode-html-language-server", "--stdio" },
+        filetypes = { "html" },
+    }
+)
+vim.lsp.enable("html")
+
+-------------------------------------------------------------------------------
+-- SECTION: JSON (.json)
+
+vim.lsp.config(
+    "jsonls", 
+    {
+        cmd = { "vscode-json-language-server", "--stdio" },
+        filetypes = { "json" }
+    }
+)
+vim.lsp.enable("jsonls")
 
 -------------------------------------------------------------------------------
 
@@ -56,6 +121,44 @@ vim.lsp.config(
 )
 
 vim.lsp.enable("rust_analyzer")
+
+-------------------------------------------------------------------------------
+
+-- SECTION: Svelte (.svelte)
+
+vim.lsp.config(
+    "svelte", 
+    {
+      cmd = { "svelteserver", "--stdio" },
+      settings = {
+        css = {
+          lint = {
+            -- Silences the linter warning when you use `@reference`, 
+            -- and `@apply` inside a style block to be able 
+            -- to use Tailwind CSS rules inside a style block
+            unknownAtRules = "ignore"
+          }
+        }
+      }
+    }
+
+)
+
+vim.lsp.enable("svelte")
+
+-------------------------------------------------------------------------------
+
+-- SECTION: Tailwind CSS
+
+vim.lsp.config(
+    "tailwindcss",
+    {
+        cmd = { "tailwindcss-language-server", "--stdio" },
+        filetypes = { "css", "svelte" },
+    }
+)
+
+vim.lsp.enable("tailwindcss")
 
 -------------------------------------------------------------------------------
 
