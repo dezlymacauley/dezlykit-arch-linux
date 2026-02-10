@@ -18,8 +18,9 @@ mkdir -p "${HOME}/.go-global-pkgs"
 # The Docker engine
 sudo pacman -S --needed docker
 
-# The CLI plugin for extended build capabilities
-# sudo pacman -S --needed docker-buildx
+# This installs the BuildKit plugin for the Docker cli
+# The improves the speed of building
+sudo pacman -S --needed docker-buildx
 
 # sudo pacman -S --needed docker-compose
 
