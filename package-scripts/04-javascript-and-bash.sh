@@ -52,6 +52,10 @@ npm install -g @tailwindcss/language-server@latest
 # Language support for `.sh` files
 npm install -g bash-language-server@latest
 
+# A cli tool for checking if a shell script is POSIX compliant,
+# and if a script contains syntax errors.
+sudo pacman -S --needed shellcheck
+
 # Language support for Solidity
 # npm install -g @nomicfoundation/solidity-language-server@latest
 # npm install -g vscode-solidity-server@latest

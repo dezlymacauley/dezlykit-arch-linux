@@ -40,3 +40,12 @@ export GOBIN="$GOPATH/bin"
 export PATH="$GOBIN:$PATH"
 
 #______________________________________________________________________________
+
+# SECTION: Python
+
+# This allows the shell access the binaries of Python packages 
+# that were installed with the command:
+# `uv tool install name-of-package`
+export PATH="$HOME/.local/bin:$PATH"
+
+#______________________________________________________________________________
