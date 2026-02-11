@@ -43,6 +43,11 @@ npm install -g @tailwindcss/language-server@latest
 # Language support for `.sh` files
 npm install -g bash-language-server@latest
 
+# Language support for Solidity
+npm install -g @nomicfoundation/solidity-language-server@latest
+npm install -g vscode-solidity-server@latest
+npm install -g solc@latest
+
 echo
 echo "The following npm packages have been installed:"
 echo
