@@ -144,3 +144,25 @@ sudo pacman -S --needed materia-gtk-theme
 echo
 
 #______________________________________________________________________________
+
+# SECTION: Content Creation
+
+# Video recording Software
+sudo pacman -S --needed obs-studio       	
+
+# Background removal plugin for OBS
+paru -S --needed --noconfirm obs-backgroundremoval
+
+# allows OBS to use your Intel UHD 620 (my GPU) through VAAPI/QuickSync.
+sudo pacman -S --needed intel-media-driver 
+
+# Video Editing Software
+sudo pacman -S --needed kdenlive
+
+# Thumbnail creation / Image editing software
+sudo pacman -S --needed gimp
+
+# Document creation
+sudo pacman -S --needed libreoffice-fresh
+
+#______________________________________________________________________________

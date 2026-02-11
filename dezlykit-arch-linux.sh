@@ -55,9 +55,9 @@ PACKAGE_SCRIPTS_DIR="$SCRIPT_DIR/package-scripts"
 # shellcheck source=./package-scripts/02-go-and-docker.sh
 # shellcheck source=./package-scripts/03-python.sh
 # shellcheck source=./package-scripts/04-javascript-and-bash.sh
-# shellcheck source=./package-scripts/05-terminal-workspace.sh
-# shellcheck source=./package-scripts/06-gui-workspace.sh
-
+# shellcheck source=./package-scripts/05-fonts.sh
+# shellcheck source=./package-scripts/06-terminal-workspace.sh
+# shellcheck source=./package-scripts/07-gui-workspace.sh
 for dot_sh_file in "$PACKAGE_SCRIPTS_DIR"/*.sh; do
     [ -f "$dot_sh_file" ] || continue
     . "$dot_sh_file"
