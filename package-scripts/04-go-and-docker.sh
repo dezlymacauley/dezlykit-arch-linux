@@ -5,11 +5,14 @@
 # SECTION: Go
 
 # The compiler for the Go programming language
-sudo pacman -S --needed go
+mise use --global go@latest
 
 # Create a custom directory for Go tools that are installed 
 # with the command `go install`
-mkdir -p "${HOME}/.go-global-pkgs"
+mkdir -p "${HOME}/.go-global-pkgs/bin"
+
+# Language support for Go projects
+go install golang.org/x/tools/gopls@latest
 
 #______________________________________________________________________________
 
@@ -22,7 +25,11 @@ sudo pacman -S --needed docker
 # The improves the speed of building
 sudo pacman -S --needed docker-buildx
 
-# sudo pacman -S --needed docker-compose
+# Docker compose allows you to define and run applications that require 
+# multiple Docker containers. 
+# E.g. A Rust API that may need one Docker container for the server 
+# and second Docker container for the database.
+sudo pacman -S --needed docker-compose
 
 # Language support for `Dockerfile` and `compose.yml` files
 go install \
