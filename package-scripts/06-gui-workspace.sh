@@ -85,6 +85,29 @@ echo
 sudo pacman -S --needed pavucontrol
 echo
 
+#______________________________________________________________________________
+
+# SECTION: External Drive Management
+
+echo
+sudo pacman -S --needed udiskie
+
+#______________________________________________________________________________
+
+# SECTION: Clipboard Functionality
+
+# Adds clipboard functionality to Wayland
+# Neovim requires a clipboard tool to be installed.
+sudo pacman -S --needed wl-clipboard
+
+# A Wayland clipboard manager
+echo
+sudo pacman -S --needed cliphist 
+
+# Ensures that copied data remains in the clipboard after an application
+# has been closed.
+echo
+sudo pacman -S --needed wl-clip-persist
 
 #______________________________________________________________________________
 
