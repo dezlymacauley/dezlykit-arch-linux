@@ -7,3 +7,9 @@ the `package-scripts` directory executable.
 find package-scripts -type f -name '*.sh' -exec chmod +x {} \;
 ```
 _______________________________________________________________________________
+
+To login to Hyprland run this command from the TTY:
+```sh
+start-hyprland
+```
+_______________________________________________________________________________
