@@ -20,6 +20,9 @@ echo
 
 # SECTION: Terminal Tools
 
+# A terminal emulator written in Zig
+sudo pacman -S --needed ghostty
+
 # A shell prompt written in Rust. 
 # It makes it easier to see what directory you are in without having to keep
 # typing the `pwd` command.

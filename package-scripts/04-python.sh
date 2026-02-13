@@ -14,16 +14,19 @@ mise use --global uv@latest
 
 # A cli tool for API testing
 # It comes with two main commands `http` and `https`
-uv tool install httpie
+uv tool install httpie@latest
 
 # A Rust-powered formatter for Python
-uv tool install ty
+uv tool install ty@latest
 
 # A Rust-powered language server for Python
-uv tool install ruff
+uv tool install ruff@latest
 
 # A language server for Cmake files
-uv tool install cmake-language-server 
+uv tool install cmake-language-server@latest 
+
+# A package manager for C and C++
+uv tool install conan@latest
 
 echo "The following Python tools have been installed by uv:"
 uv tool list
