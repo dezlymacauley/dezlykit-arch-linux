@@ -22,6 +22,9 @@ uv tool install ty
 # A Rust-powered language server for Python
 uv tool install ruff
 
+# A language server for Cmake files
+uv tool install cmake-language-server 
+
 echo "The following Python tools have been installed by uv:"
 uv tool list
 

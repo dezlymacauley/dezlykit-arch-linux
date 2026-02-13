@@ -30,6 +30,34 @@ vim.lsp.enable("bashls")
 
 -------------------------------------------------------------------------------
 
+-- SECTION: C (.c) and C++ (C++)
+
+vim.lsp.config(
+    "clangd", 
+    {
+        cmd = { "clangd" },
+        filetypes = { "c", "cpp" }
+    }
+)
+
+vim.lsp.enable("clangd")
+
+-------------------------------------------------------------------------------
+
+-- SECTION: Cmake
+
+vim.lsp.config(
+    "cmake", 
+    {
+        cmd = { "cmake-language-server" },
+        filetypes = { "cmake" }
+    }
+)
+
+vim.lsp.enable("cmake")
+
+-------------------------------------------------------------------------------
+
 -- SECTION: CSS (.css)
 
 vim.lsp.config(
@@ -137,6 +165,34 @@ vim.lsp.enable("rust_analyzer")
 
 -------------------------------------------------------------------------------
 
+-- SECTION: Solidity (.sol)
+
+-- vim.lsp.config(
+--     "solidity_ls_nomicfoundation", 
+--     {
+--         cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+--         filetypes = { "solidity" }
+--     }
+--
+-- )
+
+-- vim.lsp.enable("solidity_ls_nomicfoundation")
+
+--
+-- vim.lsp.config(
+--     "solidity_ls", 
+--     {
+--         cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+--         filetypes = { "solidity" }
+--     }
+--
+-- )
+
+-- vim.lsp.enable("solidity_ls_nomicfoundation")
+
+
+-------------------------------------------------------------------------------
+
 -- SECTION: Svelte (.svelte)
 
 vim.lsp.config(
@@ -189,3 +245,6 @@ vim.lsp.config(
 vim.lsp.enable("ts_ls")
 
 -------------------------------------------------------------------------------
+---
+---
+vim.lsp.enable("zls")

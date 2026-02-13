@@ -1,0 +1,6 @@
+require("00-core-settings.01_runtimepath_settings")
+require("00-core-settings.02_keymap_settings")
+require("00-core-settings.03_native_options")
+require("00-core-settings.04_plugin_manager")
+require("00-core-settings.05_lsp_settings")
+require("00-core-settings.06_diagnostic_display")
