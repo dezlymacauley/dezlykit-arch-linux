@@ -4,9 +4,12 @@
 # be installed so you need to update the default package manager `pacman`,
 # and then use pacman to update all of the default packages that are included
 # in the Arch Linux ISO image.
-if ! command -v paru 1>/dev/null 2>/dev/null; then
-    echo
+if ! command -v paru >/dev/null 2>&1; then
+    echo "paru not found, using pacman..."
     sudo pacman -Syu
+else
+    echo "paru found, using paru..."
+    paru -Syu
 fi
 
 # A collection of packages that are required by many AUR packages
