@@ -5,7 +5,7 @@
 # SECTION: Go
 
 # The compiler for the Go programming language
-mise use --global go@latest
+sudo pacman -S --needed go
 
 # Create a custom directory for Go tools that are installed 
 # with the command `go install`

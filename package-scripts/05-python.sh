@@ -5,12 +5,16 @@
 # SECTION: Python
 
 # The interpreter for the Python programming language
-# This also includes `pip` the default package manager for Python
-mise use --global python@latest
+
+# NOTE: Do not install Python globally with `mise` because certain packages
+# on `https://archlinux.org/packages/` like `virt-manager` require the
+# system version of Node.js 
+
+sudo pacman -S --needed python
 
 # A Rust-powered version manager, and package manager for Python,
 # that can also setup Python virtual environments
-mise use --global uv@latest
+sudo pacman -S --needed uv
 
 # A cli tool for API testing
 # It comes with two main commands `http` and `https`

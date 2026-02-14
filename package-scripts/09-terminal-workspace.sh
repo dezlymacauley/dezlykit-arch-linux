@@ -27,36 +27,36 @@ sudo pacman -S --needed ghostty
 # It makes it easier to see what directory you are in without having to keep
 # typing the `pwd` command.
 echo
-mise use -g starship@latest
+sudo pacman -S --needed starship
 echo
 
 # A Rust alternative to the `ls` command.
 # It makes is easier to distinguish directories from files,
 # and to see what a filetype is.
 echo
-mise use -g lsd@latest
+sudo pacman --needed lsd
 echo
 
 # A Rust alternative to the `cat` command.
 # It allows you to browse a file from the terminal without opening it,
 # and with an output that has syntax highlighting
 echo
-mise use -g bat@latest
+sudo pacman -S --needed bat
 echo
 
 # A Rust-powered terminal file manager
 echo
-mise use -g yazi@latest
+sudo pacman -S --needed yazi
 echo
 
 # This is used by yazi to preview .svg files
 echo
-mise use -g resvg@latest
+sudo pacman -S --needed resvg
 echo
 
 # Terminal multiplexor
 echo
-mise use -g zellij@latest
+sudo pacman -S --needed zellij
 echo
 
 echo
@@ -79,18 +79,25 @@ echo
 
 # SECTION: Neovim Setup
 
+# Neovim requires lua version 5.1
+echo
+sudo pacman -S --neede lua51
+echo
+
 # The best terminal code editor in the world.
 echo
 mise use -g neovim@latest
 
 # Used by the Neovim plugin `nvim-telescope` to search for text in a file.
 echo
-mise use -g ripgrep@latest
+sudo pacman -S --needed ripgrep
+echo
 
 # Used by the Neovim plugin `nvim-telescope` to search for files 
 # in a directory.
 echo
-mise use -g fd@latest
+sudo pacman -S --needed fd
+echo
 
 # This is needed by the Neovim plugin `nvim-treesitter` to download parsers
 # for syntax highlighting
@@ -104,7 +111,12 @@ sudo pacman -S --needed curl
 
 # This is required by the Neovim plugin `nvim-treesitter` to work correctly.
 echo
-mise use -g tree-sitter@latest
+
+# NOTE: Doe not seem to be working
+
+sudo pacman -S --needed tree-sitter
+sudo pacman -S --needed tree-sitter-cli
+echo
 
 # Adds clipboard functionality to Wayland
 # Neovim requires a clipboard tool to be installed.

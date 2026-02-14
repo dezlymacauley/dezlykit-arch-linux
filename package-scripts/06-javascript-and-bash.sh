@@ -5,15 +5,15 @@
 # SECTION: Node.js and npm
 
 # The most widely used JavaScript runtime
-mise use --global node@latest
+sudo pacman -S --needed nodejs
 
 # The most widely used JavaScript package manager
 # On Arch Linux, the `nodejs` package does not include `npm`
-# sudo pacman -S --needed npm
+sudo pacman -S --needed npm
 
 # Create a custom directory for npm packages that are installed 
 # with the command `npm install -g name-of-package`
-mkdir -p "${HOME}/.npm-global-pkgs"
+mkdir -p "${HOME}/.npm-global-pkgs/bin"
 
 # Set npm to use this directory 
 # npm packages installed with the command `npm install -g name-of-package`,
@@ -52,13 +52,12 @@ npm install -g @tailwindcss/language-server@latest
 # Language support for `.sh` files
 npm install -g bash-language-server@latest
 
+# Language support for Solidity
+npm install -g @nomicfoundation/solidity-language-server@latest
+
 # A cli tool for checking if a shell script is POSIX compliant,
 # and if a script contains syntax errors.
 sudo pacman -S --needed shellcheck
-
-# Language support for Solidity
-# npm install -g @nomicfoundation/solidity-language-server@latest
-# npm install -g vscode-solidity-server@latest
 
 echo
 echo "The following npm packages have been installed:"
@@ -73,6 +72,6 @@ echo
 # SECTION: Deno
 
 # A security-focused JavaScript runtime that is written in Rust
-mise use --global deno@latest
+sudo pacman -S --needed deno
 
 #______________________________________________________________________________
