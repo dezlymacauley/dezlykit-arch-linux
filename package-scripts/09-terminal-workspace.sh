@@ -86,7 +86,8 @@ echo
 
 # The best terminal code editor in the world.
 echo
-mise use -g neovim@latest
+sudo pacman -S --needed neovim
+echo
 
 # Used by the Neovim plugin `nvim-telescope` to search for text in a file.
 echo
@@ -112,7 +113,7 @@ sudo pacman -S --needed curl
 # This is required by the Neovim plugin `nvim-treesitter` to work correctly.
 echo
 
-# NOTE: Doe not seem to be working
+# NOTE: Does not seem to be working
 
 sudo pacman -S --needed tree-sitter
 sudo pacman -S --needed tree-sitter-cli

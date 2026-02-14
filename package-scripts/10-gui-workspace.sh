@@ -113,9 +113,10 @@ sudo pacman -S --needed wl-clip-persist
 
 # SECTION: GUI Applications
 
-# Web browser
+# Web browsers
 echo
 sudo pacman -S --needed firefox
+sudo pacman -S --needed chromium
 echo
 
 # Video player
