@@ -26,4 +26,23 @@ sudo pacman -S --needed ninja
 # Otherwise, it generates Makefiles for use with make.
 sudo pacman -S --needed cmake
 
+# bear is a rust-powered command that you add to the Makefile of your
+# C++ project. It will create a `compile_commands.json` file that will allow
+# clangd provide path completion when refering to header file.
+
+# E.g. Example of usage in the Makefile of your project
+# run:
+# 	mkdir -p bin/
+# 	bear -- clang++ -std=c++23 -Iinclude -Wconversion src/*.cpp -o bin/main
+# 	./bin/main
+
+# Without bear, if you had a header file in `include/Car.h` of your project,
+# and then you have the file `src/Car.cpp` and you tried to reference the
+# header file like this:
+# `#include "Car.h"`,
+# you would get an error message like this:
+# 'Car.h' file not found clang (pp_file_not_found) [1, 10]
+
+sudo pacman -S --needed bear
+
 #______________________________________________________________________________
