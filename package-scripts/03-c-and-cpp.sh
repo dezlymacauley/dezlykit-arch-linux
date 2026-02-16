@@ -7,7 +7,7 @@
 # A compiler for C++ code `clang++`
 # A language server for C and C++ `clangd`
 # A code formatter for C and C++ `clang-format`
-sudo pacman -S --needed clang
+# sudo pacman -S --needed clang
 
 # Traditional build automation tool.
 # Executes instructions defined in a Makefile.

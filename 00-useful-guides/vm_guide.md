@@ -119,6 +119,108 @@ vm_status
 _______________________________________________________________________________
 
 
-Opent the `virt-manager` GUI
+Open the `virt-manager` GUI
 
 _______________________________________________________________________________
+
+## Step 10 - Open the `Virtual Machine Manager` program
+
+You should see `QEMU/KVM` listed. 
+
+Click on it and make sure that it is connected.
+
+_______________________________________________________________________________
+## Step 11 - Create a virtual machine pool
+
+Click `File`, then click `New Virtual Machine`
+
+Then select the option `Import existing disk image`
+
+Then click `Forward`
+
+_______________________________________________________________________________
+Click `Browse`
+
+You should see something that says:
+```
+default 
+Filesystem Directory
+```
+
+There should be a `plus` icon at the bottom that displays the 
+text `Add Pool` if you hover over it.
+
+Then click on it.
+
+_______________________________________________________________________________
+
+Change the `Name` field to `virtual-machines`
+
+And change the `Target Path` to where the `virtual-machines` 
+directory is saved on your system.
+
+Click `Finish`
+
+_______________________________________________________________________________
+
+You should see this:
+
+```
+virtual-machines
+Filesystem Directory
+```
+
+Click it and you should see your kali-linux `qcow2` file image 
+listed under `Volumes`
+
+Click the kali-linux iso and then click `Choose Volume`
+
+_______________________________________________________________________________
+
+Look for the search bar:
+
+`Choose the operating system you are installing:`
+
+Kali won't appear in the drop down. 
+
+This is because Kali is actually a fork of Linux distro called `Debian`.
+
+To be even more specific, Kali Linux is based of the `testing` branch 
+of Debian.
+
+So search and select `Debian testing`
+
+Then click `Forward`
+
+_______________________________________________________________________________
+I use this for memory and CPU settings:
+
+- Memory: 3072 Mib
+- CPUs:   2 CPU
+
+_______________________________________________________________________________
+
+Click `Forward`
+
+Change the name from `debiantesting` to `kali`
+
+Click `finish`
+
+_______________________________________________________________________________
+
+You should see a message:
+
+```
+Virtual Network is not active.
+Would you like to start the network now.
+```
+
+`Yes`
+
+_______________________________________________________________________________
+
+The login username is `kali`.
+
+The password is `kali`
+_______________________________________________________________________________
+

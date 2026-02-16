@@ -44,6 +44,20 @@ vim.lsp.enable("clangd")
 
 -------------------------------------------------------------------------------
 
+-- SECTION: Clangd
+
+vim.lsp.config(
+    "clangd",
+    {
+        cmd = { "clangd" },
+        filetypes = { "c", "cpp" },
+    }
+)
+
+vim.lsp.enable("clangd")
+
+-------------------------------------------------------------------------------
+
 -- SECTION: Cmake
 
 vim.lsp.config(

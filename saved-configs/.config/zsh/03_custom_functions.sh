@@ -32,7 +32,7 @@ shell_reload() {
 # SECTION: Virtual Machines: QEMU/libvirt
 
 vm_status() {
-    if systemctl is-active --quiet libvirtd.service; then
+    if systemctl is-active --quiet libvirtd.socket; then
         echo
         echo "✅ QEMU/libvirt engine is active"
         echo
@@ -42,21 +42,21 @@ vm_status() {
         echo
     fi
 }
-
 vm_toggle() {
-    if systemctl is-active --quiet libvirtd.service; then
+    if systemctl is-active --quiet libvirtd.socket; then
         sudo systemctl stop \
             libvirtd.service \
             libvirtd.socket \
             libvirtd-admin.socket \
             libvirtd-ro.socket >/dev/null 2>&1
-
         echo
         echo "⬛ QEMU/libvirt engine deactivated"
         echo
     else
-        sudo systemctl start libvirtd.service >/dev/null 2>&1
-
+        sudo systemctl start \
+            libvirtd.socket \
+            libvirtd-admin.socket \
+            libvirtd-ro.socket >/dev/null 2>&1
         echo
         echo "✅ QEMU/libvirt engine activated"
         echo
