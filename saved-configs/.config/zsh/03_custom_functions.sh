@@ -1,4 +1,19 @@
+# SECTION: GITHUB_REPOS
+
+# Central location
+GITHUB_REPOS="$HOME/workspace/github-repos"
+
+gr() {
+    cd "$GITHUB_REPOS/$1" || return
+    nvim .
+}
+
+# Usage:
+# To open the github-repos directory in Neovim: `gr`
+# To open a sub directory in Neovim: `gr c-programming-mastery`
+
 #______________________________________________________________________________
+
 # SECTION: $PATH Management
 
 # Display the contents ot the $PATH variable in a list format
