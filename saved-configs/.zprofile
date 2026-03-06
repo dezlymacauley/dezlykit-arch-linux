@@ -15,6 +15,17 @@ export BINSTALL_DISABLE_TELEMETRY=true
 
 #______________________________________________________________________________
 
+# SECTION: Solana
+
+# Manually downloaded binaries for the Solana CLI, Anchor Cli, 
+# and Surfpool Cli
+# https://github.com/anza-xyz/agave/releases
+export PATH="$HOME/.local/share/solana-cli/bin:$PATH"
+export PATH="$HOME/.local/bin/anchor-cli:$PATH"
+export PATH="$HOME/.local/bin/surfpool-cli:$PATH"
+
+#______________________________________________________________________________
+
 # SECTION: TypeScript / JavaScript
 
 # This allows the shell access the binaries of npm packages 

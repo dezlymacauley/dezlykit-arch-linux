@@ -117,6 +117,7 @@ sudo pacman -S --needed wl-clip-persist
 echo
 sudo pacman -S --needed firefox
 sudo pacman -S --needed chromium
+paru -S --needed opera
 echo
 
 # Video player

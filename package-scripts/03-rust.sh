@@ -35,13 +35,13 @@ rustup component add --toolchain stable rust-analyzer
 
 # This will add an executable binary to `$HOME/.cargo/bin/`
 if ! command -v cargo-binstall 1>/dev/null 2>/dev/null; then
-    printf '\n'
+    echo
     cargo install cargo-binstall
 else
     # Once `cargo-binstall` is installed, you can update it by 
     # using `cargo binstall` to download a pre-compiled binary, 
     # rather than having to build it from source again.
-    printf '\n'
+    echo
     cargo binstall --no-confirm cargo-binstall
 fi
 
@@ -51,9 +51,9 @@ fi
 
 # A cargo plugin for visualizing/analyzing a crate's internal structure.
 
-printf '\n'
+echo
 cargo binstall --no-confirm cargo-modules
-printf '\n'
+echo
 
 #______________________________________________________________________________
 
@@ -61,8 +61,8 @@ printf '\n'
 
 # A polyglot tool version manager written in Rust
 
-printf '\n'
+echo
 cargo binstall --no-confirm mise
-printf '\n'
+echo
 
 #______________________________________________________________________________

@@ -3,6 +3,12 @@
 -- It is used to format files types in the directory:
 -- $HOME/.config/nvim/after/ftplugin
 --=============================================================================
+
+-- Builtin:
+-- gd
+-- Ctrl ]
+
+--=============================================================================
 -- SECTION: Native Keymaps => Buffer Navigation 
 
 -- Ctrl + n

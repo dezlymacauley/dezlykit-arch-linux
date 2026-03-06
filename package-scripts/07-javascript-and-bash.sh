@@ -7,6 +7,9 @@
 # The most widely used JavaScript runtime
 sudo pacman -S --needed nodejs
 
+# A JavaScript package manager required by the Anchor smart contract framework
+sudo pacman -S --needed yarn
+
 # The most widely used JavaScript package manager
 # On Arch Linux, the `nodejs` package does not include `npm`
 sudo pacman -S --needed npm

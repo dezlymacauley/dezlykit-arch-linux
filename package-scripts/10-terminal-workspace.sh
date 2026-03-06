@@ -34,7 +34,7 @@ echo
 # It makes is easier to distinguish directories from files,
 # and to see what a filetype is.
 echo
-sudo pacman --needed lsd
+sudo pacman -S --needed lsd
 echo
 
 # A Rust alternative to the `cat` command.
@@ -81,7 +81,7 @@ echo
 
 # Neovim requires lua version 5.1
 echo
-sudo pacman -S --neede lua51
+sudo pacman -S --needed lua51
 echo
 
 # The best terminal code editor in the world.

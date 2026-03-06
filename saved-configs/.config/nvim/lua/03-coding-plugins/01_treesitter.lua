@@ -46,7 +46,7 @@ return {
         require("nvim-treesitter").install(
             { 
                 "bash", "c", "cpp", "cmake", "css", "dockerfile", "git_config", "gitignore", "go", "gomod", "gosum", "html", "ini", "javascript", "json", 
-                "markdown", "markdown_inline", "python", "rust", "solidity", "sql", 
+                "markdown", "make", "markdown_inline", "python", "rust", "solidity", "sql", 
                 "svelte", "toml", "typescript", "yaml", "zig"
             }
         )
@@ -57,7 +57,7 @@ return {
         vim.api.nvim_create_autocmd("FileType", {
             pattern = { 
                 "cmake", "c", "cpp", "css", "dockerfile", "dosini", "gitconfig", "gitignore", "go", "gomod", "gosum", "html", "javascript", "json", 
-                "markdown", "python", "rust", "sh", "solidity", "sql", "svelte", 
+                "markdown", "make", "python", "rust", "sh", "solidity", "sql", "svelte", 
                 "toml", "typescript", "yaml", "zig"
             },
             callback = function()
