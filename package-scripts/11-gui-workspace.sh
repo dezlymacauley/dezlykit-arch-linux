@@ -117,6 +117,7 @@ sudo pacman -S --needed wl-clip-persist
 echo
 sudo pacman -S --needed firefox
 
+# Google Chrome
 if ! command -v paru >/dev/null 2>&1; then
     paru -S --needed --noconfirm google-chrome
 fi
@@ -134,6 +135,10 @@ echo
 sudo pacman -S --needed viewnior
 echo
 
+# Code Editor
+if ! command -v paru >/dev/null 2>&1; then
+    paru -S --needed --noconfirm visual-studio-code-bin
+fi
 
 #______________________________________________________________________________
 
