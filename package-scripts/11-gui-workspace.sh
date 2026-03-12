@@ -116,7 +116,11 @@ sudo pacman -S --needed wl-clip-persist
 # Web browsers
 echo
 sudo pacman -S --needed firefox
-sudo pacman -S --needed chromium
+
+if ! command -v paru >/dev/null 2>&1; then
+    paru -S --needed --noconfirm google-chrome
+fi
+
 paru -S --needed opera
 echo
 
