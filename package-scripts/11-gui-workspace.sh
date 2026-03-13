@@ -140,6 +140,16 @@ if ! command -v paru >/dev/null 2>&1; then
     paru -S --needed --noconfirm visual-studio-code-bin
 fi
 
+# Video Communication
+if ! command -v paru >/dev/null 2>&1; then
+    paru -S --needed --noconfirm zoom
+fi
+
+# Text Communication
+if ! command -v paru >/dev/null 2>&1; then
+    paru -S --noconfirm slack-desktop-wayland
+fi
+
 #______________________________________________________________________________
 
 # SECTION: Theming
